@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Example</title>
+
+    <style>
+        /* Element Selector */
+        p {
+            color: blue;
+            font-size: 18px;
+        }
+
+        /* Class Selector */
+        .highlight {
+            background-color: yellow;
+        }
+
+        /* ID Selector */
+        #main-title {
+            font-size: 32px;
+            color: red;
+        }
+
+        /* Attribute Selector */
+        input[type="text"] {
+            border: 2px solid black;
+            padding: 5px;
+        }
+
+        /* Pseudo-class Selector */
+        a:hover {
+            color: green;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- ID Selector -->
+    <h1 id="main-title">Welcome to CSS Selectors</h1>
+
+    <!-- Element Selector -->
+    <p>This is a simple paragraph styled using an element selector.</p>
+
+    <!-- Class Selector -->
+    <p class="highlight">This paragraph is highlighted using a class selector.</p>
+
+    <!-- Attribute Selector -->
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+    </form>
+
+    <!-- Pseudo-class Selector -->
+    <a href="#">Hover over this link to see the effect of the pseudo-class selector.</a>
+</body>
+</html>

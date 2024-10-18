@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Colors and Backgrounds Example</title>
+  <style>
+    .hex-color {
+        background-color: #FF00FF; /* Pink */
+        color: #FFFFFF; /* White text */
+      }
+      
+      .rgb-color {
+        background-color: rgb(0, 128, 0); /* Green */
+        color: rgb(255, 255, 255); /* White text */
+      }
+      
+      .hsl-color {
+        background-color: hsl(240, 100%, 50%); /* Blue */
+        color: hsl(0, 0%, 100%); /* White text */
+      }
+      
+      .solid-background {
+        background-color: #808080; /* Gray */
+        padding: 20px;
+      }
+      
+      .gradient-background {
+        background-image: linear-gradient(to right, #FF0000, #FFFF00);
+        padding: 20px;
+      }
+      
+      .image-background {
+        background-image: url("d382f0a59d2d2ec86c613a04f9222ecd.jpg");
+        background-size: cover;
+        height: 200px;
+      }
+  </style>
+</head>
+<body>
+  <div class="hex-color">Hex Color</div>
+  <div class="rgb-color">RGB Color</div>
+  <div class="hsl-color">HSL Color</div>
+  <div class="solid-background">Solid Background</div>
+  <div class="gradient-background">Gradient Background</div>
+  <div class="image-background">Image Background</div>
+</body>
+</html>

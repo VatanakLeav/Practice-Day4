@@ -1,0 +1,42 @@
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Solid Color Background */
+.solid-color {
+    background-color: #FF5733; /* Hex Color */
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Gradient Background */
+.gradient-background {
+    background: linear-gradient(to right, rgb(255, 87, 51), hsl(10, 100%, 60%)); /* RGB and HSL */
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Image Background */
+.image-background {
+    background-image: url('https://via.placeholder.com/600'); /* Replace with your image URL */
+    background-size: cover; /* Ensures the image covers the entire area */
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Text Color Example */
+.text-color-example {
+    color: rgb(0, 100, 255); /* RGB Color */
+    background-color: hsl(240, 100%, 90%); /* HSL Color */
+    padding: 20px;
+    text-align: center;
+}

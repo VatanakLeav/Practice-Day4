@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Responsive Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row; /* Main axis direction */
+            flex-wrap: wrap; /* Allows items to wrap to the next line */
+            justify-content: space-between; /* Distributes space between items */
+            align-items: center; /* Aligns items vertically in the center */
+            padding: 20px;
+        }
+
+        .box {
+            flex: 1 1 200px; /* Flex-grow, flex-shrink, flex-basis */
+            margin: 10px;
+            padding: 20px;
+            background-color: lightblue;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column; /* Stacks items vertically on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+</body>
+</html>

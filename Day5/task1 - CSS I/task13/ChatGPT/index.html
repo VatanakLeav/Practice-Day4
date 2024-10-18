@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables Example</title>
+    <style>
+        /* Defining variables in :root for global use */
+        :root {
+            --primary-color: #4CAF50;
+            --font-size: 16px;
+            --padding: 10px;
+        }
+
+        body {
+            font-size: var(--font-size);
+            color: var(--primary-color);
+            padding: var(--padding);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: calc(var(--font-size) * 2);
+        }
+
+        p {
+            padding: var(--padding);
+            background-color: var(--primary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Variables Example</h1>
+    <p>This is a paragraph using CSS variables.</p>
+</body>
+</html>

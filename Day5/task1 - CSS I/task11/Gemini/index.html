@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Table vs. Div Layout</title>
+  <style>
+    /* Table layout */
+    table {
+      border-collapse: collapse;
+    }
+    td {
+      border: 1px solid black;
+      padding: 5px;
+    }
+
+    /* Div layout */
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+    .section {
+      border: 1px solid black;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Table Layout</h2>
+  <table>
+    <tr>
+      <td>Header 1</td>
+      <td>Header 2</td>
+    </tr>
+    <tr>
+      <td>Content 1</td>
+      <td>Content 2</td>
+    </tr>
+  </table>
+
+  <h2>Div Layout</h2>
+  <div class="container">
+    <div class="section">Section 1</div>
+    <div class="section">Section 2</div>
+  </div>
+</body>
+</html>
