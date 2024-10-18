@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline Theme Color Selector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Offline Theme Color Selector</h1>
+    </header>
+    <div class="container">
+        <p>This webpage allows you to select a theme color for the background. Your choice will be saved and applied automatically when you revisit the page, even offline.</p>
+        <input type="color" id="colorPicker" value="#ffffff">
+        <button id="saveColor">Save Color</button>
+        <p>Current Background Color: <span id="currentColor">#ffffff</span></p>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        // Register the service worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(() => {
+                    console.log('Service Worker Registered');
+                })
+                .catch(error => {
+                    console.error('Service Worker Registration failed:', error);
+                });
+        }
+    </script>
+</body>
+</html>

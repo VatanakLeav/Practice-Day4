@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Favorite Hobbies</title>
+  <style>
+    .video-container {
+      position: relative;
+    }
+    .video-controls {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+    }
+    .video-controls button {
+      background-color: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>My Favorite Hobby: [Your Hobby]</h2>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Hoixgm4-P4M?start=160" title="YouTube Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="video-controls">
+      <button onclick="playVideo()">Play</button>
+      <button onclick="pauseVideo()">Pause</button>
+      <input type="range" min="0" max="100" value="50" oninput="setVolume(this.value)">
+    </div>
+  </div>
+
+  <h2>Listen to This</h2>
+  <audio controls>
+    <source src="../file_example_MP3_700KB.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    var video = document.querySelector('iframe');
+
+    function playVideo() {
+      video.contentWindow.postMessage('{"event":"command","target":"player","command":"playVideo"}', '*');
+    }
+
+    function pauseVideo() {
+      video.contentWindow.postMessage('{"event":"command","target":"player","command":"pauseVideo"}', '*');
+    }
+
+    function setVolume(volume) {
+      video.contentWindow.postMessage('{"event":"command","target":"player","command":"setVolume","args":[' + volume + ']}', '*');
+    }
+  </script>
+</body>
+</html>

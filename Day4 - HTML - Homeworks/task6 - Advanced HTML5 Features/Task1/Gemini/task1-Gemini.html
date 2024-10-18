@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Theme Color Picker</title>
+  <style>
+    body {
+      background-color: #fff; /* Default background color */
+    }
+  </style>
+</head>
+<body>
+  <h1>Theme Color Picker</h1>
+  <button id="redButton">Red</button>
+  <button id="blueButton">Blue</button>
+  <button id="greenButton">Green</button>
+
+  <script>
+    // Get the stored theme color from localStorage
+    var storedTheme = localStorage.getItem("theme");
+
+    // Apply the stored theme or default to white
+    if (storedTheme) {
+      document.body.style.backgroundColor = storedTheme;
+    }
+
+    document.getElementById("redButton").addEventListener("click", function() {
+      document.body.style.backgroundColor = "red";
+      localStorage.setItem("theme", "red");
+    });
+
+    document.getElementById("blueButton").addEventListener("click", function() {
+      document.body.style.backgroundColor = "blue";
+      localStorage.setItem("theme", "blue");
+    });
+
+    document.getElementById("greenButton").addEventListener("click", function() {
+      document.body.style.backgroundColor = "green";
+      localStorage.setItem("theme", "green");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Canvas Shapes</title>
+</head>
+<body>
+  <canvas id="myCanvas" width="400" height="300"></canvas>
+
+  <script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    // Draw a rectangle
+    ctx.fillStyle = "blue";
+    ctx.fillRect(20, 20, 100, 50);
+
+    // Draw a circle
+    ctx.beginPath();
+    ctx.arc(250, 150, 50, 0, 2 * Math.PI);
+    ctx.fillStyle = "green";
+    ctx.fill();
+
+    // Draw a line
+    ctx.beginPath();
+    ctx.moveTo(50, 250);
+    ctx.lineTo(350, 250);
+    ctx.strokeStyle = "red";
+    ctx.stroke();
+  </script>
+</body>
+</html>
